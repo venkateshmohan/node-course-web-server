@@ -1,0 +1,20 @@
+git --version //version of git
+git init //Initialize git repo
+ls -a //lists directories
+git status //status of the repo
+git add <filename> //to keep track of the files means adding to repo
+
+create .gitignore file to ignore the files which needs not be committed
+
+git commit -m 'Initial commit' //commit the folder in github
+//github ssh keys website - generating ssh keys
+
+ls -al ~/.ssh //to view the ssh directory
+ssh-keyen -t rsa -b 4096 -C email-id  //generating ssh keys
+id_rsa and id_rsa_pub //public and private key pair
+eval "$(ssh-agent -s)" //creating ssh agent to do ssh process
+ssh-add ~/.ssh/id_rsa //adding identity using ssh private key
+clip < ~/.ssh/id_rsa_pub //adding public key in github which copies contents to clipboard
+ssh -T git@github.com //authentication, test connection and check if ssh keys are properly setup
+git remote add origin git@github.com:venkateshmohan/node-course-web-server.git  //add the origin of the repo in github
+git push -u origin master //push the code from existing repo on command line to github
